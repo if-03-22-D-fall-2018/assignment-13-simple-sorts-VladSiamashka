@@ -10,3 +10,12 @@
  * <your description here>
  *-----------------------------------------------------------------------------
 */
+void start_stopwatch(){
+  
+}
+void stop_stopwatch(){
+
+}
+float elapsed_time(){
+  return 0.0;
+}
