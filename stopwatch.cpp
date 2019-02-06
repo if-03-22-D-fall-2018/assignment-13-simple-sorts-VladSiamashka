@@ -10,12 +10,25 @@
  * <your description here>
  *-----------------------------------------------------------------------------
 */
-void start_stopwatch(){
-  
-}
-void stop_stopwatch(){
+#include "stopwatch.h"
+#include <time.h>
 
+float start;
+float stop;
+
+void start_stopwatch()
+{
+  start = clock();
 }
-float elapsed_time(){
-  return 0.0;
+void stop_stopwatch()
+{
+  stop = clock();
+}
+float elapsed_time()
+{
+  if (stop < start)
+  {
+    return (clock() -start) / CLOCKS_PER_SEC;
+  }
+  return (stop - start) / CLOCKS_PER_SEC;
 }
